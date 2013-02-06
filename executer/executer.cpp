@@ -928,6 +928,7 @@ namespace LibExecuter
 		ActionTools::ActionInstance *actionInstance = currentActionInstance();
 
 		mExecutionWindow->setCurrentActionName(actionInstance->definition()->name());
+		mExecutionWindow->setCurrentActionComment(actionInstance->comment());
 		mExecutionWindow->setCurrentActionColor(actionInstance->color());
 
 		connect(actionInstance, SIGNAL(executionEnded()), this, SLOT(actionExecutionEnded()));

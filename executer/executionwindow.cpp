@@ -51,6 +51,13 @@ namespace LibExecuter
 		adjustSize();
 	}
 	
+	void ExecutionWindow::setCurrentActionComment(const QString &actionComment)
+	{
+		ui->currentActionComment->setText(actionComment);
+
+		//adjustSize();
+	}
+
 	void ExecutionWindow::setCurrentActionColor(const QColor &actionColor)
 	{
 		QPalette newPalette = palette();
@@ -58,12 +65,17 @@ namespace LibExecuter
 		if(actionColor.isValid())
 		{
 			ui->currentActionLabel->setAutoFillBackground(true);
+			ui->currentActionComment->setAutoFillBackground(true);
 			newPalette.setColor(QPalette::Window, actionColor);
 		}
 		else
+		{
 			ui->currentActionLabel->setAutoFillBackground(false);
-	
+			ui->currentActionComment->setAutoFillBackground(false);
+		}
+
 		ui->currentActionLabel->setPalette(newPalette);
+		ui->currentActionComment->setPalette(newPalette);
 	}
 	
 	void ExecutionWindow::setProgressEnabled(bool enabled)

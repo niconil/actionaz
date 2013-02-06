@@ -40,7 +40,7 @@ namespace ActionTools
 	class ElementDefinition;
 	class ActionException;
 
-	class ACTIONTOOLSSHARED_EXPORT ActionDefinition
+	class ACTIONTOOLSSHARED_EXPORT  ActionDefinition
 	{
 	public:
 		explicit ActionDefinition(ActionPack *pack) : mPack(pack), mIndex(-1)	{}

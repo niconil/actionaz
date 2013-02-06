@@ -39,6 +39,7 @@ namespace LibExecuter
 		~ExecutionWindow();
 
 		void setCurrentActionName(const QString &actionName);
+		void setCurrentActionComment(const QString &actionComment);
 		void setCurrentActionColor(const QColor &actionColor);
 		void setProgressEnabled(bool enabled);
 		void setProgressValue(int value);
