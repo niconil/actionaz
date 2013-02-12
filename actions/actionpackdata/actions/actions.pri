@@ -30,6 +30,5 @@ SOURCES +=	actions/readtextfileinstance.cpp \
     actions/writetextfileinstance.cpp \
     actions/webdownloadinstance.cpp \
     actions/readenvironmentinstance.cpp
-
-
+    actions/readinifileinstance.cpp
 
